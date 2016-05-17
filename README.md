@@ -28,5 +28,5 @@ node server_test.js
 
 and send a request to the agent
 ```
-node
+node request.js
 ```
