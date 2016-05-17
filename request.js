@@ -15,10 +15,10 @@
 
 
 
-var Agent = require('socks5-http-client/lib/Agent');
+// var Agent = require('socks5-http-client/lib/Agent');
+var Agent = require('./lib/Agent');
 var request = require('request');
 
-// get url, but get to the agent
 
 request({
     // url: 'http://en.wikipedia.org/wiki/SOCKS',
