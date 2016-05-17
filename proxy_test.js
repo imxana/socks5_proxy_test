@@ -1,5 +1,5 @@
 /*
- * Created by XANA on 5.17
+ * Created by XANA on 2016/5/17
  * ex: http://localhost:3000/?url=http://www.bilibili.com
  */
 
@@ -32,10 +32,11 @@ var url = require('url');
 // http is enough..
 
 http.createServer((req, res) => {
-  console.log(req.url);
+
+  console.log(req.url, req.method);
 
   var query = url.parse(req.url).query;
-  var end = querystring.parse(query) //JSON.stringify() //1=2 => 1:2
+  var end = querystring.parse(query) //JSON.stringify() //str => json
   var end_json = url.parse(end.url || '/')
 
   res.writeHead(200, { 'Content-Type': 'text/html' });
@@ -83,7 +84,7 @@ function getRequest(po, resp) {
     hostname: po.hostname,
     port: po.port,
     path: po.path,
-    method: 'GET',
+    method: 'GET', // 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
       // 'Content-Length': postData.length

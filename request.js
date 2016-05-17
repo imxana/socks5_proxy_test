@@ -1,3 +1,9 @@
+/**
+ * Created by XANA on 2016/5/17
+ *
+ */
+
+
 // var shttp = require('socks5-http-client');
 //
 // shttp.get('http://www.baidu.com/', function(res) {
@@ -7,19 +13,23 @@
 //     });
 // });
 
+
+
 var Agent = require('socks5-http-client/lib/Agent');
 var request = require('request');
 
+// get url, but get to the agent
+
 request({
     // url: 'http://en.wikipedia.org/wiki/SOCKS',
-    url: 'http://www.baidu.com/',
+    url: 'http://localhost:4000/',
     agentClass: Agent,
     agentOptions: {
       socksHost: 'localhost',
-      socksPort: 1080
+      socksPort: 3000
         // socksHost: 'my-tor-proxy-host', // Defaults to 'localhost'.
         // socksPort: 9050 // Defaults to 1080.
     }
 }, function(err, res) {
-    console.log(err || res.body);
+    console.log(err || res.body || 'wtf');
 });
