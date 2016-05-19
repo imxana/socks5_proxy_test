@@ -10,6 +10,6 @@ http.createServer((req, res) => {
     res.end('<h1>Not Found</h1>')
   }
 
-}).listen(4000, () => {
-  console.log("\033[96m   Now the server listening on *:4000\033[39m");
+}).listen(3000, () => {
+  console.log("\033[96m   Now the server listening on *:3000\033[39m");
 })

@@ -13,17 +13,17 @@ http://localhost:3000/?url=http://www.bilibili.com
 ```
 
 
-#2.Run an easy socks5-http-client
+#2.Run an easy proxy request
 
 run the agent
 ```
-node proxy_test.js
+node proxy.js
 ```
 
 and run the server
 
 ```
-node server_test.js
+node server.js
 ```
 
 and send a request to the agent
